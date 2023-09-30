@@ -103,9 +103,6 @@ public class Game {
         // Запаковывание файлов сохранения используя реализованный метод zipFiles()
         String zipFilePath = saveDir + "/zip.zip";
         zipFiles(zipFilePath, savePath);
-
-        // Удаление файлов сохранений, не лежащих в архиве
-        cleanDir(saveDir);
     }
 
     // Реализуйте метод saveGame()
@@ -141,7 +138,7 @@ public class Game {
     }
 
     //Очистка папки от всех файлов кроме .zip и каталогов
-    private void cleanDir(String dirPath) {
+    public void cleanDir(String dirPath) {
         File dir = new File(dirPath);
         for (File file : dir.listFiles()) {
             if (!file.isDirectory()) {

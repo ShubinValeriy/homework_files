@@ -12,6 +12,7 @@ public class Main {
         game.install();
         // Задание 2
         game.save(3);
+        game.cleanDir(installDirPath + "/savegames");
         // Задание 3
         game.loading();
     }
